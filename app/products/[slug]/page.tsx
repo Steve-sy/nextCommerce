@@ -43,11 +43,11 @@ export default async function ProductPage({
           {product.description}
         </div>
         <div className="flex flex-row items-center gap-5">
-          {product.images.map((image, index) => (
+          {product.images.map((image: string, index: number) => (
             <Image
+              key={index}
               isBlurred
               isZoomed
-              key={index}
               alt="images"
               radius="lg"
               src={image}
