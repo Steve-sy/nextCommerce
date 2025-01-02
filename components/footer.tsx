@@ -10,7 +10,7 @@ export default function Footer() {
   return (
     <>
       <footer className="container mx-auto max-w-7xl flex items-center justify-between p-5">
-        <div>©2024 HexaShop. All rights reserved.</div>
+        <div>©2024 MaxShop. All rights reserved to Mustafa Ramazan.</div>
         <div>
           <Link isExternal aria-label="Twitter" href={siteConfig.links.twitter}>
             <TwitterIcon className="text-default-500" />
