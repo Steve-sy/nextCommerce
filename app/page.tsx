@@ -11,7 +11,7 @@ export default function Home() {
           Your one-step ecommerce website!
         </h1>
         <p className="text-2xl">
-          Discover a world of endless shopping possibilities at our online
+          Discover now a world of endless shopping possibilities at our online
           store. Browse, choose, and order your favourite products from the
           comfort of your home.
         </p>
