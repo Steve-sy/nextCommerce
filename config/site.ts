@@ -1,7 +1,7 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "HexaShop",
+  name: "MaxShop",
   description: "Find the best product with the best price!",
   navItems: [
     {

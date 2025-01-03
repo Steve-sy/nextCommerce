@@ -8,10 +8,10 @@ export default function Home() {
     <section className="container md:columns-2 py-8 md:py-10">
       <div className="flex flex-col gap-5 py-5">
         <h1 className="text-7xl bg-gradient-to-b from-purple-400 to-purple-800 bg-clip-text text-transparent">
-          Your one-step ecommerce website!
+          (DEV) Your one-step ecommerce website!
         </h1>
         <p className="text-2xl">
-          Discover a world of endless shopping possibilities at our online
+          Discover now a world of endless shopping possibilities at our online
           store. Browse, choose, and order your favourite products from the
           comfort of your home.
         </p>
