@@ -1,11 +1,6 @@
 "use client";
-import {
-  Card,
-  CardBody,
-  CardFooter,
-  CardHeader,
-  Image
-} from "@nextui-org/react";
+import { Card, CardHeader, CardBody, CardFooter } from "@heroui/card";
+import { Image } from "@heroui/image";
 import Link from "next/link";
 import React from "react";
 
