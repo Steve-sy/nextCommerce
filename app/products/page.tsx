@@ -17,6 +17,7 @@ export default async function Products() {
     products = data.products;
   } catch (err: any) {
     error = err.message; // Capture the error message
+    console.error(error);
   }
 
   return (

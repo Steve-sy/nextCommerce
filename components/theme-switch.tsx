@@ -2,7 +2,7 @@
 
 import { FC } from "react";
 import { VisuallyHidden } from "@react-aria/visually-hidden";
-import { SwitchProps, useSwitch } from "@nextui-org/switch";
+import { SwitchProps, useSwitch } from "@heroui/switch";
 import { useTheme } from "next-themes";
 import { useIsSSR } from "@react-aria/ssr";
 import clsx from "clsx";
@@ -16,7 +16,7 @@ export interface ThemeSwitchProps {
 
 export const ThemeSwitch: FC<ThemeSwitchProps> = ({
   className,
-  classNames,
+  classNames
 }) => {
   const { theme, setTheme } = useTheme();
   const isSSR = useIsSSR();
@@ -31,11 +31,11 @@ export const ThemeSwitch: FC<ThemeSwitchProps> = ({
     isSelected,
     getBaseProps,
     getInputProps,
-    getWrapperProps,
+    getWrapperProps
   } = useSwitch({
     isSelected: theme === "light" || isSSR,
     "aria-label": `Switch to ${theme === "light" || isSSR ? "dark" : "light"} mode`,
-    onChange,
+    onChange
   });
 
   return (
@@ -44,8 +44,8 @@ export const ThemeSwitch: FC<ThemeSwitchProps> = ({
         className: clsx(
           "px-px transition-opacity hover:opacity-80 cursor-pointer",
           className,
-          classNames?.base,
-        ),
+          classNames?.base
+        )
       })}
     >
       <VisuallyHidden>
@@ -64,10 +64,10 @@ export const ThemeSwitch: FC<ThemeSwitchProps> = ({
               "!text-default-500",
               "pt-px",
               "px-0",
-              "mx-0",
+              "mx-0"
             ],
-            classNames?.wrapper,
-          ),
+            classNames?.wrapper
+          )
         })}
       >
         {!isSelected || isSSR ? (

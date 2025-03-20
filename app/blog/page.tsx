@@ -8,12 +8,13 @@ export default async function BlogPage() {
   let error = null;
 
   try {
-    const res = await fetch("https://dummyapi.online/api/blogposts");
+    const res = await fetch("https://dummyjson.com/posts");
 
     if (!res.ok) {
       throw new Error("Failed to fetch posts");
     }
-    posts = await res.json();
+
+    posts = (await res.json()).posts;
   } catch (err: any) {
     error = err.message; // Capture the error message
   }

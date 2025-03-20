@@ -1,12 +1,8 @@
-import { Image } from "@nextui-org/image";
+import { Image } from "@heroui/image";
 import { IoChevronBackCircle } from "react-icons/io5";
 
-type Props = {
-  post: { title: string; content: string };
-};
-
 async function fetchPost(postID: string) {
-  const res = await fetch(`https://dummyapi.online/api/blogposts/${postID}`);
+  const res = await fetch(`https://dummyjson.com/posts/${postID}`);
 
   return res.json();
 }
@@ -20,10 +16,7 @@ export async function generateMetadata({
   const postID = String(params.slug).split("-")[0];
   const post = await fetchPost(postID);
 
-  return {
-    title: post.title,
-    description: post.content.substring(0, 150)
-  };
+  return { title: post.title, description: post.body.substring(0, 150) };
 }
 
 export default async function BlogPage({
@@ -83,7 +76,7 @@ export default async function BlogPage({
         </div>
         <div className="flex flex-col mt-12 prose prose-slate dark:prose-dark gap-5 leading-7">
           <Image src="https://picsum.photos/1000/1000.jpg?random" />
-          {post.content}
+          {post.body}
         </div>
       </article>
     </>
