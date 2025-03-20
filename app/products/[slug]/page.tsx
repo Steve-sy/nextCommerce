@@ -1,5 +1,5 @@
 import React from "react";
-import { Image } from "@nextui-org/image";
+import { Image } from "@heroui/image";
 import { IoChevronBackCircle } from "react-icons/io5";
 
 export default async function ProductPage({

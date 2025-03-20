@@ -1,32 +1,29 @@
 {
   "$schema": "https://json.schemastore.org/eslintrc.json",
-  "env": {
-    "browser": false,
-    "es2021": true,
-    "node": true
-  },
+  "env": { "browser": false, "es2021": true, "node": true },
   "extends": [
     "plugin:react/recommended",
     "plugin:prettier/recommended",
     "plugin:react-hooks/recommended",
     "plugin:jsx-a11y/recommended"
   ],
-  "plugins": ["react", "unused-imports", "import", "@typescript-eslint", "jsx-a11y", "prettier"],
+  "plugins": [
+    "react",
+    "unused-imports",
+    "import",
+    "@typescript-eslint",
+    "jsx-a11y",
+    "prettier"
+  ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
-    },
+    "ecmaFeatures": { "jsx": true },
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "settings": {
-    "react": {
-      "version": "detect"
-    }
-  },
+  "settings": { "react": { "version": "detect" } },
   "rules": {
-    "no-console": "warn",
+    "no-console": "off",
     "react/prop-types": "off",
     "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off",
@@ -59,11 +56,7 @@
           "index"
         ],
         "pathGroups": [
-          {
-            "pattern": "~/**",
-            "group": "external",
-            "position": "after"
-          }
+          { "pattern": "~/**", "group": "external", "position": "after" }
         ],
         "newlines-between": "always"
       }
@@ -80,8 +73,8 @@
     ],
     "padding-line-between-statements": [
       "warn",
-      {"blankLine": "always", "prev": "*", "next": "return"},
-      {"blankLine": "always", "prev": ["const", "let", "var"], "next": "*"},
+      { "blankLine": "always", "prev": "*", "next": "return" },
+      { "blankLine": "always", "prev": ["const", "let", "var"], "next": "*" },
       {
         "blankLine": "any",
         "prev": ["const", "let", "var"],

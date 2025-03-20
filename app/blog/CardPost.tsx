@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Card, CardHeader, CardFooter, Image, Button } from "@nextui-org/react";
+import { Card, CardHeader, CardFooter, Image, Button } from "@heroui/react";
 import Link from "next/link";
 
 export default function CardPost({
@@ -12,7 +12,7 @@ export default function CardPost({
     title: string;
     author: string;
     date_published: Date;
-    content: string;
+    body: string;
   };
 }) {
   return (
@@ -43,7 +43,7 @@ export default function CardPost({
                 Published on: {new Date(post.date_published).toDateString()}
               </p>
               <p className="text-tiny text-white/60">
-                {post.content.substring(0, 100)}...
+                {post.body.substring(0, 100)}...
               </p>
             </div>
           </div>

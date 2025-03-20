@@ -6,12 +6,12 @@ import {
   NavbarBrand,
   NavbarItem,
   NavbarMenuItem
-} from "@nextui-org/navbar";
-import { Button } from "@nextui-org/button";
-import { Kbd } from "@nextui-org/kbd";
-import { Link } from "@nextui-org/link";
-import { Input } from "@nextui-org/input";
-import { link as linkStyles } from "@nextui-org/theme";
+} from "@heroui/navbar";
+import { Button } from "@heroui/button";
+import { Kbd } from "@heroui/kbd";
+import { Link } from "@heroui/link";
+import { Input } from "@heroui/input";
+import { link as linkStyles } from "@heroui/theme";
 import NextLink from "next/link";
 import clsx from "clsx";
 
@@ -30,10 +30,7 @@ export const Navbar = () => {
   const searchInput = (
     <Input
       aria-label="Search"
-      classNames={{
-        inputWrapper: "bg-default-100",
-        input: "text-sm"
-      }}
+      classNames={{ inputWrapper: "bg-default-100", input: "text-sm" }}
       endContent={
         <Kbd className="hidden lg:inline-block" keys={["command"]}>
           K
