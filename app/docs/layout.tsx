@@ -1,5 +1,5 @@
 export default function DocsLayout({
-  children,
+  children
 }: {
   children: React.ReactNode;
 }) {

@@ -1,8 +1,6 @@
 import { Image } from "@heroui/image";
 import { IoChevronBackCircle } from "react-icons/io5";
 
-type Props = { post: { title: string; body: string } };
-
 async function fetchPost(postID: string) {
   const res = await fetch(`https://dummyjson.com/posts/${postID}`);
 
