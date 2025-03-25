@@ -1,9 +1,12 @@
+import os from "os";
+
 import { Image } from "@heroui/image";
 import { Button } from "@heroui/button";
 import Link from "next/link";
 import { FaShoppingCart } from "react-icons/fa";
 
 export default function Home() {
+  const hostname = os.hostname();
   const isDev = process.env.DEV_MODE === "true";
 
   return (
@@ -17,6 +20,7 @@ export default function Home() {
           store. Browse, choose, and order your favourite products from the
           comfort of your home.
         </p>
+        <p className="text-2xl">on server: {hostname}</p>
         <Button
           as={Link}
           className="flex items-center gap-2 max-w-min"
