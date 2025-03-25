@@ -5,9 +5,12 @@ import { Button } from "@heroui/button";
 import Link from "next/link";
 import { FaShoppingCart } from "react-icons/fa";
 
+import { getServerIp } from "./lib/server-info";
+
 export default function Home() {
   const hostname = os.hostname();
   const isDev = process.env.DEV_MODE === "true";
+  const serverIp = getServerIp();
 
   return (
     <section className="container md:columns-2 py-8 md:py-10">
@@ -20,7 +23,9 @@ export default function Home() {
           store. Browse, choose, and order your favourite products from the
           comfort of your home.
         </p>
-        <p className="text-2xl">on server: {hostname}</p>
+        <p className="text-2xl">
+          on server: {hostname} {serverIp}
+        </p>
         <Button
           as={Link}
           className="flex items-center gap-2 max-w-min"
