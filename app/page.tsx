@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import os from "os";
 
 import { Image } from "@heroui/image";
